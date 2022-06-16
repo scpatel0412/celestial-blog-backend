@@ -34,6 +34,9 @@ router.post("/signin-user",(req,res,next) => {
             message:"Authentication Failed",
             error:err
         })
+        if(!err){
+            next()
+        }
     })
 })
 
